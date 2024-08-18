@@ -9,15 +9,15 @@ This is a FastAPI application for scraping product information from https://dent
 
 ## Build and Run the Application
 
-1. Clone the repository:
+1. Clone the repository :
 
    - Open Command shell.
-   - Run "git clone https://github.com/ARB666/scraper_fast_api.git".
-   - Run "cd scraper_fast_api".
+   - Run 'git clone https://github.com/ARB666/scraper_fast_api.git'.
+   - Run 'cd scraper_fast_api'.
 
-2. Build and run the app using :
+2. Build and run the app :
 
-    - docker-compose up --build
+    - Run 'docker-compose up --build'
 
 3. To start scraping, go to http://localhost:8000/docs and use the /scrape endpoint. The endpoint requires the following parameters:
 
@@ -28,4 +28,4 @@ This is a FastAPI application for scraping product information from https://dent
 
 4. After scraping, you can view the json file containing the data inside "scraper_fast_api/data" directory. Similarly, all images scraped are inside "scraper_fast_api/data/images".
 
-5. Use the command "docker-compose down-v" to stop and remove the containers.
+5. Use the command 'docker-compose down-v' to stop and remove the containers.
