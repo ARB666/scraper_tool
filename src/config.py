@@ -6,3 +6,4 @@ REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
 REDIS_PORT = os.getenv('REDIS_PORT', 6379)
 
 DATA_DIRECTORY = os.getcwd() + "/data"
+DATA_IMAGE_DIRETORY = os.getcwd() + "/data/images"

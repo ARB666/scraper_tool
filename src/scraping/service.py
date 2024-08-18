@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 from src.scraping.schemas import ScrapeSettings, Product
 from src.database import Database
-from src.config import DATA_DIRECTORY
+from src.config import DATA_DIRECTORY, DATA_IMAGE_DIRETORY
 from src.notification import Notification
 from src.cache import Cache
 
@@ -71,10 +71,10 @@ class ScraperService:
         return None
 
     def _download_image(self, url):
-        os.makedirs(f"{DATA_DIRECTORY}/images", exist_ok=True)
+        os.makedirs(DATA_IMAGE_DIRETORY, exist_ok=True)
         response = requests.get(url, stream=True)
         if response.status_code == 200:
-            path = f"{DATA_DIRECTORY}/images/{os.path.basename(url)}"
+            path = f"{DATA_IMAGE_DIRETORY}/{os.path.basename(url)}"
             with open(path, 'wb') as file:
                 for chunk in response.iter_content(1024):
                     file.write(chunk)
