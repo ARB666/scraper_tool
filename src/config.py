@@ -7,3 +7,4 @@ REDIS_PORT = os.getenv('REDIS_PORT', 6379)
 
 DATA_DIRECTORY = os.getcwd() + "/data"
 DATA_IMAGE_DIRETORY = os.getcwd() + "/data/images"
+BASE_URL = "https://dentalstall.com/shop/"

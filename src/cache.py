@@ -9,10 +9,7 @@ class Cache:
     def is_price_changed(self, product: Product):
         cached_price = self.client.get(product.product_title)
         cached_price = cached_price.decode('utf-8') if cached_price else None
-        print('cached_price :', cached_price)
-        print('actual price', product.product_price)
         return cached_price is None or cached_price != product.product_price
 
     def update_cache(self, product: Product):
-        print('saving product in cache')
         self.client.set(product.product_title, product.product_price)

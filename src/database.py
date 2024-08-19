@@ -6,7 +6,6 @@ class Database:
         self.filename = filename
 
     def save(self, product: Product):
-        print('saving product in db')
         products = self._load_products()
         product_json = product.model_dump()
         for i,p in enumerate(products):
